@@ -16,7 +16,7 @@ gas_gravity = float(gas_gravity)
 
 # the if statement
 
-if co2_comp > 12 or n2_comp > 3 or h2s_comp > 0:
+if co2_comp > 0.12 or n2_comp > 0.03 or h2s_comp > 0:
     gas_gravity = (gas_gravity - (1.1767*h2s_comp) - \
                       (1.5196*co2_comp) - (0.9672*n2_comp) - \
                        (0.622*h2o_comp))/(1- h2s_comp - co2_comp - n2_comp - h2o_comp)
