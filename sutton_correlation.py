@@ -25,4 +25,4 @@ pseudo_temperature = (1 - h2s_comp - co2_comp - n2_comp - h2o_comp)*pseudo_criti
 print('The pseudo-critical pressure is {0:2f} psia'.format(pseudo_critical_pressure))
 print('The pseudo-critical temperature is {0:.2f} deg Rankine'.format(pseudo_critical_temperature))
 print('The pseudo pressure is {0:2f} psia'.format(pseudo_pressure))
-print('The pseudo temperature is {0:2f} psia'.format(pseudo_temperature))
+print('The pseudo temperature is {0:2f} deg Rankine'.format(pseudo_temperature))
