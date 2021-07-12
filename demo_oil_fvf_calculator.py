@@ -25,5 +25,5 @@ else:
 
 # continuing after the if block
 # displaying the results.
-print('The oil formation volume factor is {0:.2f} RB/STB'.format(bo))
+print('The oil formation volume factor at {0:.2f} psi is {1:.2f} RB/STB'.format(p, bo))
  
