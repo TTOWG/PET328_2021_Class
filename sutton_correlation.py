@@ -48,3 +48,10 @@ pseudo_critical_temp = ( 1 - (h2s_comp) - (co2_comp) - (n2_comp) - \
 # displaying the results to calculate the pseudo-critical pressure and temperature for the entire mixture
 print('The pseudo-critical pressure is {0:.2f} psia'.format(pseudo_critical_press))
 print('The pseudo-critical temperature is {0:.2f} deg Rankine'.format(pseudo_critical_temp))
+
+
+
+                              
+
+                              
+ 
