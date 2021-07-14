@@ -24,13 +24,13 @@ total_stoiip = 0
 
 for j in range(1,ny+1):
     for i in range(1,nx+1):
-        poro = float(input('What is the value of porosity for this block?'))
-        sw = float(input('What is the value of water saturation for this block?'))
+        block_n_order = (nx*(j-1))+i
+        poro = float(input('What is the value of porosity for Block {0}?'.format(block_n_order)))
+        sw = float(input('What is the value of water saturation for Block {0}?'.format(block_n_order)))
         block_stoiip = (7758*area*h*poro*(1-sw))/boi
-        block_position = (nx*(j-1))+i
         total_stoiip = total_stoiip + block_stoiip
-        print('The amount of oil in Block {0:.0f} is {1:.2f} STB'.format(block_position, block_stoiip))
+        print('The amount of oil in Block {0} is {1:.2f} STB'.format(block_n_order, block_stoiip))
 
-# continuing after the if block
+# continuing after the 'for' loop
 # displaying the results.
 print('The amount of oil in the entire reservoir is {0:.2f} STB'.format(total_stoiip))                       
