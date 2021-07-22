@@ -42,6 +42,6 @@ for j in range(1, ny+1):
         print("The current value of the oil formation factor is", bo)
         #continuing after the if block
         #displaying the results.
-        print('The total cumulative oil produced from the reservoir is {0:.2f} STB'.format(tnp))
+print('The total cumulative oil produced from the reservoir is {0:.2f} STB'.format(tnp))
 
         
