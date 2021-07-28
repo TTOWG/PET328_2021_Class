@@ -19,9 +19,9 @@ area = delta_x*delta_y
 # initializing output variable
 
 total_stoiip = 0
- 
-# the 'for' loop
 
+
+# the 'for' loop
 for j in range(1,ny+1):
     for i in range(1,nx+1):
         block_n_order = (nx*(j-1))+i

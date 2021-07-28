@@ -27,10 +27,10 @@ if co2_comp > 0.12 or n2_comp > 0.03 or h2s_comp > 0:
 
 # computing pseudo-critical pressure and temperature of the hydrocarbon mixture
 
-pseudo_critical_press = 756.8 - (131*gas_gravity) - (3.6*gas_gravity**2)
-pseudo_critical_temp = 169.2 + (349.5*gas_gravity) - (74.0*gas_gravity**2)
+p_pch = 756.8 - (131*gas_gravity) - (3.6*gas_gravity**2)
+t_pch = 169.2 + (349.5*gas_gravity) - (74.0*gas_gravity**2)
 
 # displaying the results.
-print('The pseudo-critical pressure is {0:.2f} psia'.format(pseudo_critical_press))
-print('The pseudo-critical temperature is {0:.2f} deg Rankine'.format(pseudo_critical_temp))
+print('The hydrocarbon pseudo-critical pressure is {0:.2f} psia'.format(p_pch))
+print('The hydrocarbon pseudo-critical temperature is {0:.2f} deg Rankine'.format(p_pch))
  
