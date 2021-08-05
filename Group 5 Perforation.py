@@ -82,7 +82,7 @@ if lp>ldd:
     sh=s_h(lp,rw)
     sv=s_v(lp,rw)
     rwd= (rw/(lp+rw))
-    swb = c_1*math.exp(c_2*rwd)
+    swb=s_wb(lp,rw)
     spd = ((hp/lp)*((kh/kpd)-1))*(math.log(rpd/rp))
     Sp = sh+sv+swb+spd
     
@@ -112,16 +112,4 @@ else:
 
 
     
-    
-
-    
-    
-
-
-
-    
-
-    
-    
-
-
+   
