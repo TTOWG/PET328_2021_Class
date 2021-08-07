@@ -53,9 +53,11 @@ print('The specfic gravity is {0:.2f}'.format(specific_gravity))
 
 #IF conditons
 if specific_gravity < 0.75:
+    print("Its a Natural Gas System")
     Tpc = 168 + 325*specific_gravity - 12.5*specific_gravity**2
     Ppc = 677 + 15.0*specific_gravity - 37.5*specific_gravity**2
 else:
+    print("Its a Gas-Condensate System")
     Tpc = 187 + 330*specific_gravity - 71.5*specific_gravity**2
     Ppc = 706 - 51.7*specific_gravity - 11.1*specific_gravity**2
 
