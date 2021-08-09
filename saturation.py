@@ -10,9 +10,9 @@ toh=0
 def soh(h,poro,so):
     soh= h*poro*so
     return soh
-def swoh(h,poro,so):
-    soh= h*poro*so
-    return soh
+def swoh(h,poro,swo):
+    swoh= h*poro*swo
+    return swoh
 
 #listing
 list_soh=[]
@@ -26,7 +26,7 @@ for x in range(1,n+1):
     so=float(input("Enter the oil saturation of sample {0}?:".format(sample_position)))
     swo=float(input("Enter the water saturation of sample {0}?:".format(sample_position)))
     s_oh=soh(h,poro, so)
-    s_woh= swoh(h,poro,so)
+    s_woh= swoh(h,poro,swo)
     oh= h*poro
     toh= toh+oh
     tsoh= tsoh+s_oh
