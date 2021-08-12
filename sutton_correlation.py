@@ -43,5 +43,5 @@ pseudo_temp = ((1-h2s_comp-h2o_comp-n2_comp-co2_comp)* pseudo_critical_temp) \
 print('The pseudo pressure is {0:.2f} psia'.format(pseudo_pressure))
 print('The pseudo temperature is {0:.2f} deg Rankine'.format(pseudo_temp))
 
-#..... Adelaja Samuel 18CN024463 TTOWG
+#..... Dan-Sule Andrew 18CN024483
                   
