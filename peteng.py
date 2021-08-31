@@ -104,7 +104,7 @@ def stoiip_2(data):
 #print(stoiip_2(data_dict))
 
 
-########  A function to compute STOIIP for all blocks in a discretized reservoir ########
+########  A function to compute STOIIP for all blocks in a discretized reservoir, and returns the value total STOIIP and a list of block STOIIP ########
 def stoiip_discretized(Lx, Ly, h, nx, ny, boi, poro_list, swi_list):
     
     # discretizing the reservoir
@@ -128,4 +128,30 @@ def stoiip_discretized(Lx, Ly, h, nx, ny, boi, poro_list, swi_list):
             stoiip_list.append(block_stoiip)  
             total_stoiip = total_stoiip + block_stoiip
     return total_stoiip, stoiip_list
+
+
+########  A function to compute STOIIP for all blocks in a discretized reservoir, and returns the value total STOIIP and a dictionary of block STOIIP ########
+def stoiip_discretized_2(Lx, Ly, h, nx, ny, boi, poro_list, swi_list):
     
+    # discretizing the reservoir
+    delta_x = Lx/nx
+    delta_y = Ly/ny
+
+    # calculating the area per block
+    area = delta_x*delta_y
+
+    # initializing output variables
+    total_stoiip = 0
+    stoiip_dict ={}
+    
+    # the 'for' loop
+    for j in range(1,ny+1):
+        for i in range(1,nx+1):
+            block_n_order = (nx*(j-1))+i
+            block_label = 'Block'+str(block_n_order) # to be used as key in stoiip_dict
+            poro = poro_list[(block_n_order - 1)] 
+            sw = swi_list[(block_n_order - 1)]  
+            block_stoiip = (7758*area*h*poro*(1-sw))/boi
+            stoiip_dict[block_label] = block_stoiip  
+            total_stoiip = total_stoiip + block_stoiip
+    return (total_stoiip, stoiip_dict)    
